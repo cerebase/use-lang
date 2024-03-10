@@ -5,33 +5,20 @@ export function useChat(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const reader = response.body.getReader();
+    const eventSource = new EventSource(url);
 
-        while (true) {
-          const { done, value } = await reader.read();
-
-          if (done) {
-            break; // Exit the loop if the stream is done
-          }
-
-          // Handle incoming data
-          const newData = JSON.parse(new TextDecoder().decode(value));
-          setData(newData);
-        }
-      } catch (error) {
-        // Handle errors
-        setError(error);
-      }
+    eventSource.onmessage = (event) => {
+      // Handle incoming data
+      const newData = JSON.parse(event.data);
+      setData(newData);
     };
 
-    fetchData();
-
-    return () => {
-      // Cleanup if the component unmounts
+    eventSource.onerror = (event) => {
+      // Handle errors
+      setError(event);
     };
+
+    return () => eventSource.close();
   }, [url]);
 
   return { data, error };

@@ -12,7 +12,9 @@ Hyperparse is a powerful and flexible HTML parsing library implemented in Rust. 
 
 - **Flexible API:** The Hyperparse API is designed to be flexible and customizable. You can easily integrate the parser into your Rust applications and adapt it to suit your specific use cases.
 
-## Getting Started
+## Inspiration
+
+- https://www.npmjs.com/package/@chainlit/react-client
 
 ### Prerequisites
 
