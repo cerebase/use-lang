@@ -16,7 +16,8 @@
     "build": "tsup"
   },
   "keywords": [
-    "alpha"
+    "alpha",
+    "unstable"
   ],
   "author": "cerebase",
   "license": "MIT",
