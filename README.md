@@ -34,7 +34,7 @@ If you encounter any issues or have suggestions for improvement, please feel fre
 This package is open-source and distributed under the [MIT License](LICENSE).
 
 ## Credits
-`@cerebase/lang` is maintained and developed by [Your Name/Organization]. We are grateful to the open-source community for their contributions and support.
+`@cerebase/lang` is maintained and developed by [cerebase](https://cerebase.com/). We are grateful to the open-source community for their contributions and support.
 
 ---
 

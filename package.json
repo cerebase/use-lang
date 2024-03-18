@@ -1,6 +1,6 @@
 {
   "name": "@cerebase/lang",
-  "description": "",
+  "description": "Framework agnostic LLM toolkit",
   "version": "0.0.3",
   "private": false,
   "homepage": "https://cerebase.com",
@@ -16,7 +16,8 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "tsup"
+    "build": "tsup",
+    "lint": "pnpm dlx oxlint@latest"
   },
   "keywords": [
     "alpha",
