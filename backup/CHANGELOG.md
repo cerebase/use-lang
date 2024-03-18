@@ -1,4 +1,0 @@
-- https://rob-blackbourn.medium.com/beyond-eventsource-streaming-fetch-with-readablestream-5765c7de21a1
-- https://blog.theodormarcu.com/p/how-chatgpt-streams-responses-back
-- https://medium.com/@hxu296/serving-openai-stream-with-fastapi-and-consuming-with-react-js-part-1-8d482eb89702
-- https://developer.mozilla.org/en-US/docs/Web/API/EventSource

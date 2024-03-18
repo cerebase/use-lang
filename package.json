@@ -1,8 +1,11 @@
 {
-  "name": "lang",
+  "name": "@cerebase/lang",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "private": false,
   "homepage": "https://cerebase.com",
+  "author": "cerebase",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/cerebase/use-lang"
@@ -19,8 +22,9 @@
     "alpha",
     "unstable"
   ],
-  "author": "cerebase",
-  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.4.0",
     "tsup": "^8.0.2",

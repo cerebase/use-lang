@@ -1,25 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 
-export function useChat(url) {
+interface props {
+    origin: string
+}
+
+export function useChat({ origin}: props) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const eventSource = new EventSource(url);
+    const eventSource = new EventSource(origin);
 
     eventSource.onmessage = (event) => {
-      // Handle incoming data
       const newData = JSON.parse(event.data);
-      setData(newData);
+      setData(newData); // Handle incoming data
     };
 
     eventSource.onerror = (event) => {
-      // Handle errors
-      setError(event);
+      setError(event); // Handle errors
     };
 
     return () => eventSource.close();
-  }, [url]);
+  }, [origin]);
 
   return { data, error };
 }
