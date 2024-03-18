@@ -5,8 +5,8 @@ interface props {
 }
 
 export function useChat({ origin}: props) {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState<any | null>(null);
+  const [error, setError] = useState<number | null> (null);
 
   useEffect(() => {
     const eventSource = new EventSource(origin);
@@ -17,7 +17,7 @@ export function useChat({ origin}: props) {
     };
 
     eventSource.onerror = (event) => {
-      setError(event); // Handle errors
+      setError(event.timeStamp); // Handle errors
     };
 
     return () => eventSource.close();
